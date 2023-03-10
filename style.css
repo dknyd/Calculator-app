@@ -1,0 +1,225 @@
+:root{
+    /* THEME 1 */
+        /* Backgrounds */
+        --Very-dark-desaturated-blue-main-background : hsl(222, 26%, 31%);
+        --Very-dark-desaturated-blue-toggle-background-keypad-background: hsl(223, 31%, 20%);
+        --Very-dark-desaturated-blue-screen-background: hsl(224, 36%, 15%);
+    
+        /* Keys */
+        --Desaturated-dark-blue-key-background: hsl(225, 21%, 49%);
+        --Desaturated-dark-blue-key-shadow: hsl(224, 28%, 35%);
+        --Red-key-background-toggle: hsl(6, 63%, 50%);
+        --Dark-red-key-shadow: hsl(6, 70%, 34%);
+        --Light-grayish-orange-key-background: hsl(30, 25%, 89%);
+        --Grayish-orange-key-shadow: hsl(28, 16%, 65%);
+    
+         /* Text */
+        --Very-dark-grayish-blue: hsl(221, 14%, 31%);
+        --White: hsl(0, 0%, 100%);
+    
+    /* THEME 2 */
+        /* Backgrounds */
+        --Light-gray-main-background: hsl(0, 0%, 90%);
+        --Grayish-red-toggle-background-keypad-background: hsl(0, 5%, 81%);
+        --Very-light-gray-screen-background: hsl(0, 0%, 93%);
+    
+        /* Keys */
+        --Dark-moderate-cyan-key-background: hsl(185, 42%, 37%);
+        --Very-dark-cyan-key-shadow: hsl(185, 58%, 25%);
+        --Orange-key-background-toggle: hsl(25, 98%, 40%);
+        --Dark-orange-key-shadow: hsl(25, 99%, 27%);
+        --Light-grayish-yellow-key-background: hsl(45, 7%, 89%);
+        --Dark-grayish-orange-key-shadow: hsl(35, 11%, 61%);
+    
+         /* Text */
+         --Very-dark-grayish-yellow: hsl(60, 10%, 19%);
+         --White-text: hsl(0, 0%, 100%);
+    
+    
+    /* THEME 3 */
+        /* Backgrounds */
+        --Very-dark-violet-main-background: hsl(268, 75%, 9%);
+        --Very-dark-violet-toggle-background-keypad-background-screen-background: hsl(268, 71%, 12%);
+    
+        /* Keys */
+        --Dark-violet-key-background: hsl(281, 89%, 26%);
+        --Vivid-magenta-key-shadow: hsl(285, 91%, 52%);
+        --Pure-cyan-key-background-toggle: hsl(176, 100%, 44%);
+        --Soft-cyan-key-shadow: hsl(177, 92%, 70%);
+        --Very-dark-violet-key-background: hsl(268, 47%, 21%);
+        --Dark-magenta-key-shadow: hsl(290, 70%, 36%);
+    
+         /* Text */
+        --Light-yellow: hsl(52, 100%, 62%);
+        --Very-dark-blue: hsl(198, 20%, 13%);
+    }
+*{
+    font-family: 'League Spartan', sans-serif;
+    border: none;
+}
+
+body{
+    min-height: 100vh;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    background-color:  var(--Very-dark-desaturated-blue-main-background);
+}
+
+.containerMain{
+    display: flex;
+    flex-direction: column;
+    width: 33rem;
+}
+
+.containerTop{
+    display:flex;
+    justify-content: space-between;
+    color: var(--White-text);
+}
+
+.logo{
+    font-size: 2rem;
+}
+
+span{
+    font-size: 0.8rem;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 2rem;
+}
+
+.btn{
+    padding: 5px;
+    border-radius: 0.5rem;
+    background-color: var(--Very-dark-desaturated-blue-toggle-background-keypad-background);
+}
+
+.containerMid input{ 
+    width: 100%;
+    height: 6rem;
+    border-radius: 0.5rem;
+    margin-top: 1rem;
+    font-size: 2.5rem;
+    padding: 1rem;
+    text-align: end;
+    background-color: var(--Very-dark-desaturated-blue-screen-background);
+    color: var(--White-text)
+}
+
+.containerBottom{
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    background-color: var(--Very-dark-desaturated-blue-toggle-background-keypad-background);
+    padding: 1rem;
+    border-radius: 0.5rem;
+}
+
+.button{
+    font-size: 32px;
+    margin: 0.7rem;
+    border-radius: 0.4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 6rem;
+    height: 4rem;
+    color: var(--Very-dark-grayish-blue);
+    box-shadow: 0px 3px var(--Grayish-orange-key-shadow);
+}
+
+.button:active{
+    background-color: white;
+}
+
+.buttonDel{
+    background-color: var(--Desaturated-dark-blue-key-background);
+    box-shadow: 0px 3px var(--Desaturated-dark-blue-key-shadow);
+    border: 0px;
+    color: white;
+}
+
+.buttonDel:active{
+    background-color: var(--Desaturated-dark-blue-key-background);
+}
+
+.buttonReset{
+    background-color: var(--Desaturated-dark-blue-key-background);
+    box-shadow: 0px 3px var(--Desaturated-dark-blue-key-shadow);
+    color: white;
+    grid-area: 5/1/6/3;
+    width: auto;
+}
+
+.buttonEqual{
+    background-color: var(--Red-key-background-toggle);
+    box-shadow: 0px 3px var(--Dark-red-key-shadow);
+    color: white;
+    grid-area: 5/3/6/5;
+    width: auto;
+}
+
+.buttonEqual:active{
+        background-color: var(--Red-key-background-toggle);
+}
+
+/* MOBILE VIEW */
+@media screen and (max-width: 520px) {
+    .containerMain{
+        width: 15rem;
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+
+    span{
+        margin-right: 0.5rem;
+    }
+
+    .button{
+        height: 2.5rem !important;
+        width: 3rem;
+        font-size: 1rem;
+        margin: 0.2rem;
+    }
+
+	.buttonReset{
+    grid-area: 5/1/6/3;
+    width: 94%;
+}
+
+    .buttonEqual{
+    grid-area: 5/3/6/5;
+    width: 94%;
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
